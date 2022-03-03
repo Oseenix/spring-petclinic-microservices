@@ -16,6 +16,13 @@ target/
 
 # Visual Studio Code
 .factorypath
+.vscode
+
+.DS_Store
+*.swp
 
 # Branch switching
 generated/
+
+/docker/**/tempo-data/
+/docker/easeagent.jar
