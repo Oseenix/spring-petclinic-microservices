@@ -14,10 +14,10 @@
     </Appenders>
     <Loggers>
         <Root level="debug">
-            <AppenderRef ref="RollingFile"/>
             <!--
-            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
             -->
+            <AppenderRef ref="Console"/>
         </Root>
     </Loggers>
 </Configuration>

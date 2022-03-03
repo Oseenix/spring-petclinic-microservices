@@ -139,6 +139,7 @@ services:
     command: [ "-config.file=/etc/tempo.yaml" ]
     volumes:
       - ./docker/tempo/tempo-local.yaml:/etc/tempo.yaml
+      - ./docker/tempo/overrides.yaml:/etc/overrides.yaml
       - ./docker/tempo/tempo-data:/tmp/tempo
     ports:
       - "3200"   # tempo

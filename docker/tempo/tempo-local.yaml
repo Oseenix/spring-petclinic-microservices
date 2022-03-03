@@ -1,7 +1,11 @@
 server:
   http_listen_port: 3200
 
+search_enabled: true
 distributor:
+  search_tags_deny_list:
+    - "instance"
+    - "version"
   receivers:                           # this configuration will listen on all ports and protocols that tempo is capable of.
     jaeger:                            # the receives all come from the OpenTelemetry collector.  more configuration information can
       protocols:                       # be found there: https://github.com/open-telemetry/opentelemetry-collector/tree/main/receiver
@@ -43,3 +47,6 @@ storage:
     pool:
       max_workers: 100                 # worker pool determines the number of parallel requests to the object store backend
       queue_depth: 10000
+
+overrides:
+  per_tenant_override_config: /etc/overrides.yaml
